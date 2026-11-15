@@ -1,0 +1,175 @@
+/* Design system layer, loaded last.
+   Direction: a planning instrument, not a dashboard template. Flat paper surfaces,
+   hairline rules instead of shadows, square corners, one signal colour for actions,
+   a condensed face for headings and figures, tabular numbers everywhere data is shown. */
+:root {
+  --bg: #f2f1ec; --panel: #fbfaf7; --panel-2: #f2f1ec; --line: #d3d1c8; --rule: #b9b6aa;
+  --ink: #17181a; --ink-2: #55575a; --ink-3: #55575a;
+  --accent: #c2410c; --mars: #c2410c; --highlight: #9a3412;
+  --good: #26703a; --warn: #9a6200; --bad: #b42318;
+  --surface: #fbfaf7; --surface-soft: #f2f1ec; --accent-soft: #fbe5d9;
+  --gold-soft: #f4ead2; --gold-ink: #5b4106;
+  --space: #111214; --space-ink: #ecebe6; --space-muted: #b5b3ab;
+  --radius: 2px; --shadow: none;
+  --font-display: Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  --font-text: 'Segoe UI', system-ui, -apple-system, 'Noto Sans Arabic', sans-serif;
+  --mono: 'Cascadia Mono', Consolas, 'SFMono-Regular', monospace;
+}
+body { background: var(--bg); font-family: var(--font-text); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+dd, td, .mars-coordinates, .flow-site small, .mars-factor summary strong, .overview-stat strong, .metrics, .site-verdict-facts dd { font-variant-numeric: tabular-nums; }
+h1, h2, .topbar-context b, .overview-stat > strong, .site-verdict h3, .site-verdict-banner strong, .mars-site h2 { font-family: var(--font-display); letter-spacing: 0; }
+
+/* ---- Shell ---------------------------------------------------------- */
+.mission-sidebar, .mission-topbar { background: var(--panel); box-shadow: none; }
+.mission-sidebar { border-right: 1px solid var(--rule); }
+.mission-topbar { position: sticky; top: 0; height: 56px; border-bottom: 1px solid var(--rule); }
+.mission-brand { min-height: 56px; padding: 0 18px; border-bottom: 1px solid var(--line); }
+.brand-orbit { width: 30px; height: 30px; background: none; border: 0; border-radius: 0; transform: none; }
+.brand-words { font: 600 15px var(--font-display); letter-spacing: .02em; }
+.brand-words b { color: var(--ink); font-weight: 400; }
+.sidebar-mission, .sidebar-source { display: none; }
+.sidebar-toggle { top: 70px; background: var(--panel); border-color: var(--rule); border-radius: 0; }
+.mission-sidebar nav { padding: 14px 0; }
+.nav-group { margin: 0 0 14px; }
+.nav-caption { padding: 0 18px 6px; font: 600 11px var(--font-text); letter-spacing: 0; text-transform: none; color: var(--ink-2); }
+.mission-sidebar nav a, .sidebar-bottom > a { min-height: 38px; padding: 8px 18px; gap: 12px; font-size: 13.5px; color: var(--ink); border: 0; border-radius: 0; }
+.mission-sidebar nav a svg, .sidebar-bottom > a svg { color: var(--ink-2); }
+.mission-sidebar nav a:hover, .sidebar-bottom > a:hover { background: var(--panel-2); color: var(--ink); }
+.mission-sidebar a[aria-current=page] { background: var(--panel-2); color: var(--ink); font-weight: 600; box-shadow: inset 3px 0 var(--accent); }
+.nav-step { display: inline-block; flex: none; width: 18px; font: 600 13px var(--font-display); color: var(--ink-2); text-align: center; border: 0; }
+a[aria-current=page] .nav-step { color: var(--accent); background: none; }
+.nav-flow { padding: 6px 0; border-block: 1px solid var(--line); }
+.nav-flow .nav-caption { padding-top: 4px; }
+.sidebar-collapsed .mission-sidebar a > span.nav-step { display: inline-block; }
+.global-search, .registry-search { background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--radius); }
+.topbar-context > span { font: 11px var(--font-text); letter-spacing: 0; color: var(--ink-2); }
+.topbar-context b { font-size: 17px; font-weight: 600; }
+.profile-avatar { background: var(--panel-2); border: 1px solid var(--rule); color: var(--ink); border-radius: 50%; }
+.connection-status { font-size: 12px; }
+.mission-footer { padding: 12px 28px; border-top: 1px solid var(--line); font: 11.5px var(--font-text); letter-spacing: 0; color: var(--ink-2); }
+.tag { border-radius: 0; font: 600 10.5px var(--font-text); letter-spacing: .02em; background: transparent; color: var(--ink-2); border-color: var(--rule); }
+
+/* ---- Workflow strip: tabs with a ruled underline, not pills ------------ */
+.flow-bar { position: sticky; top: 56px; z-index: 15; display: flex; align-items: stretch; gap: 0; padding: 0 28px; background: var(--panel); border-bottom: 1px solid var(--rule); }
+.flow-bar ol { display: flex; flex: 1; min-width: 0; margin: 0; padding: 0; list-style: none; }
+.flow-bar li { display: flex; min-width: 0; }
+.flow-bar li + li::before { display: none; }
+.flow-bar li a { display: flex; align-items: center; gap: 10px; padding: 10px 22px 9px 0; margin-right: 22px; border-radius: 0; color: var(--ink-2); text-decoration: none; border-bottom: 3px solid transparent; }
+.flow-bar li a:hover { color: var(--ink); background: none; border-bottom-color: var(--line); }
+.flow-number { width: auto; height: auto; border: 0; background: none; font: 600 22px/1 var(--font-display); color: var(--rule); }
+.flow-text { display: grid; line-height: 1.25; white-space: nowrap; }
+.flow-text b { font-size: 13.5px; font-weight: 600; }
+.flow-text small { font-size: 11.5px; color: var(--ink-2); }
+.flow-bar li[data-state=current] a { color: var(--ink); background: none; border-bottom-color: var(--accent); }
+.flow-bar li[data-state=current] .flow-number { background: none; color: var(--accent); }
+.flow-bar li[data-state=done] .flow-number { background: none; color: var(--ink-2); }
+.flow-site { display: flex; align-items: center; gap: 9px; padding: 0 18px; margin-left: auto; border: 0; border-left: 1px solid var(--line); border-radius: 0; background: none; color: var(--accent); }
+.flow-site span { display: grid; line-height: 1.3; }
+.flow-site b { color: var(--ink); font-size: 13px; max-width: 190px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.flow-site small { color: var(--ink-2); font: 11px var(--mono); }
+.flow-actions { display: flex; align-items: center; gap: 8px; padding-left: 18px; border-left: 1px solid var(--line); }
+.flow-actions .button-link { min-height: 34px; font-size: 13px; white-space: nowrap; }
+
+/* ---- Surfaces: flat, ruled ------------------------------------------- */
+.overview-stat, .intelligence-card, .orbital-panel, .panel, .mission-cards > article, .settings-card, .archive-card,
+.candidate-grid > article, .data-summary > div, .archive-summary > div, .provenance-grid article, .nav-results > div,
+.nav-frames figure, .surface-navigation, .quick-tool-grid a, .mars-report, .site-verdict, .terrain-factor-grid article,
+.mission-table, .route, .workspace-empty { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: none; }
+.panel-title, .card-footnote, .mission-table thead th, .mission-advice, .advisor-header, .site-guide .guide-question,
+.advisor-disclaimer, .simulation-snapshot, .full-report .mars-site, .full-report .mission-tabs, .suggested-questions button { background: var(--panel-2); }
+.panel-title { border-bottom: 1px solid var(--line); }
+.mission-table thead th { font: 600 11.5px var(--font-text); letter-spacing: 0; text-transform: none; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+.mission-table td { color: var(--ink); }
+.route.on { background: var(--panel); box-shadow: inset 3px 0 var(--accent); border-color: var(--rule); }
+.mission-notice, .app .source, .chat-question { background: var(--gold-soft); border-color: #d9c58f; color: var(--gold-ink); border-radius: var(--radius); }
+.app .source b { color: var(--gold-ink); }
+.inline-error { background: #fbe9e7; border-color: #e8b4ad; color: var(--bad); }
+.quick-tool-grid a:hover { background: var(--panel-2); border-color: var(--rule); }
+
+/* ---- Controls -------------------------------------------------------- */
+.mission-shell button, .mission-shell select, .mission-shell input, .button-link { border-radius: var(--radius); }
+.mission-shell button { min-height: 32px; }
+button, .mars-explorer button, .mars-report button, .button-link { background: var(--panel); color: var(--ink); border: 1px solid var(--rule); }
+button:hover:not(:disabled), .mars-explorer button:hover:not(:disabled), .mars-report button:hover:not(:disabled), .button-link:hover { background: var(--panel-2); border-color: var(--ink-2); }
+button.on, .mission-tabs button[aria-pressed=true], .full-report .mission-tabs button[aria-pressed=true],
+.mars-explorer button[aria-pressed=true], .mars-report button[aria-pressed=true], .route-select[aria-pressed=true],
+.panel-title .seg button.on, .panel-title .seg button[aria-pressed=true], .orbital-regions button[aria-pressed=true] { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+.mission-shell button.primary, .mission-shell .primary-link { background: var(--accent); border-color: var(--accent); color: #fff !important; box-shadow: none; font-weight: 600; }
+.mission-shell button.primary:hover:not(:disabled), .mission-shell .primary-link:hover { background: var(--highlight); border-color: var(--highlight); }
+.mission-shell button.primary:disabled { background: var(--panel-2); border-color: var(--line); color: var(--ink-2) !important; opacity: 1; }
+.mission-tabs { gap: 0; border-bottom: 1px solid var(--rule); }
+.mission-tabs button { border: 0; border-bottom: 3px solid transparent; background: none; border-radius: 0; }
+.mission-tabs button[aria-pressed=true], .full-report .mission-tabs button[aria-pressed=true] { background: none; color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+input, select, textarea, .mars-coordinate-form input[type=number], .mars-landmarks input, .guide-question textarea { background: var(--panel); border: 1px solid var(--rule); color: var(--ink); }
+
+/* ---- Page header ----------------------------------------------------- */
+.mission-content { padding-top: 20px; }
+.page-heading { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.mission-content h1, .app .brand h1 { font: 600 30px/1.1 var(--font-display); letter-spacing: 0; margin: 0 0 6px; }
+.page-description { font-size: 14px; color: var(--ink-2); }
+.page-kicker { font: 600 11.5px var(--font-text); letter-spacing: 0; text-transform: none; color: var(--ink-2); }
+.site-picker { font-size: 12px; }
+.site-picker select { font-size: 13px; min-height: 36px; }
+.mission-content h2 { font: 600 16px var(--font-display); }
+
+/* ---- Map: dark canvas ------------------------------------------------ */
+.dashboard-globe.mars-stage, .explorer-page .mars-stage, .mars-stage { --mars-ink: var(--space-ink); --mars-muted: var(--space-muted); color: var(--space-muted); background: var(--space); border-radius: var(--radius); }
+.mars-stage-top { background: linear-gradient(#111214e0, transparent); }
+.mars-stage-bottom { background: linear-gradient(0deg, #111214e0, transparent); }
+.mars-stage-bottom span:last-child, .mars-active-route { color: #f2b27a; font-family: var(--mono); }
+.mars-stage-north i { border-bottom-color: #f2b27a; }
+.orbital-topline, .orbital-topline small, .orbital-bottomline { color: var(--space-muted); }
+.orbital-north { color: var(--space-ink); }
+.orbital-label { background: var(--panel); border-radius: 0; }
+.mars-globe-fallback { color: var(--space-muted); }
+.mars-stage-controls { gap: 0; }
+.mars-stage-controls button { width: 34px; height: 34px; margin: 0; background: var(--panel) !important; color: var(--ink); border: 1px solid var(--rule); border-radius: 0; box-shadow: none; }
+.mars-stage-controls button + button { border-top: 0; }
+.explorer-grid { grid-template-columns: minmax(0, 1fr) minmax(360px, 440px); gap: 20px; }
+.explorer-page .mars-stage { height: clamp(420px, calc(100vh - 290px), 760px); }
+.mars-map-tools, .mars-landmarks { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.mars-layers { font-size: 13px; gap: 8px 16px; color: var(--ink-2); }
+.mars-coordinate-form label, .mars-landmarks button { font-size: 12.5px; }
+.mars-data, .mars-factor, .mars-muted, .mars-unavailable, .mars-weights { font-size: 13px; }
+.mars-kicker { font: 600 11.5px var(--font-text); letter-spacing: 0; text-transform: none; color: var(--ink-2); }
+.mars-factor summary strong { font: 500 12.5px var(--mono); }
+.mars-metadata, .mars-factor-detail small { font-size: 11px; }
+.mars-data a, .mars-report a, .mission-content a:not(.button-link) { color: var(--highlight); }
+.mars-report, .mars-explorer { --mars-surface: var(--panel); --mars-accent: var(--accent); }
+.globe-report-slot { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.globe-report-slot:empty { display: none; }
+.score-ring circle { stroke: var(--line); }
+.score-ring circle + circle { stroke: var(--accent); }
+
+@media (max-width: 1250px) {
+  .flow-text small { display: none; }
+  .explorer-grid { grid-template-columns: minmax(0, 1fr) minmax(320px, 380px); }
+}
+@media (max-width: 980px) {
+  .mission-topbar { height: 56px; }
+  .flow-bar { top: 56px; padding: 0 20px; }
+  .flow-site { display: none; }
+  .explorer-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .explorer-page .mars-stage { height: clamp(320px, 52vh, 520px); }
+  /* One column: the answer follows the map directly; map tools come after it. */
+  .explorer-grid > .mars-explorer, .explorer-grid .mars-workspace { display: contents; }
+  .explorer-grid .mars-workspace > * { order: 3; }
+  .explorer-grid .mars-workspace > .mars-stage { order: 1; }
+  .explorer-grid > .globe-report-slot { order: 2; }
+}
+@media (max-width: 760px) {
+  .flow-bar { padding: 0 12px; }
+  .flow-bar ol { overflow-x: auto; scrollbar-width: none; }
+  .flow-bar li a { padding-right: 12px; margin-right: 10px; gap: 7px; }
+  .flow-bar li:not([data-state=current]) .flow-text { display: none; }
+  .flow-actions { padding-left: 10px; }
+  .flow-actions .button-link:not(.primary-link) { display: none; }
+  .mission-content h1, .app .brand h1 { font-size: 26px; }
+}
+
+/* Section labels: sentence case, no tracking. */
+.panel h2, .panel summary, .evidence-label, .mission-cards p.evidence-label, .stat span { text-transform: none; letter-spacing: 0; }
+.panel h2, .panel summary { font: 600 14px var(--font-display); color: var(--ink); }
+.evidence-label, .mission-cards p.evidence-label { font: 600 11.5px var(--font-text); color: var(--ink-2); }
+.stat span { font-size: 11px; }

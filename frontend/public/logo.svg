@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64">
+  <title>Martian Map</title>
+  <defs><clipPath id="d"><circle cx="32" cy="32" r="28"/></clipPath></defs>
+  <circle cx="32" cy="32" r="28" fill="#ff7b29"/>
+  <g clip-path="url(#d)" fill="none" stroke="#c4501a" stroke-width="2.4" stroke-linecap="round">
+    <path d="M2 24c10-6 18 3 28-2s16-12 34-6"/>
+    <path d="M2 41c12-5 20 5 31 0s18-9 31-4"/>
+    <path d="M18 56c6-6 14-4 20-8s10-4 16-2"/>
+  </g>
+  <path d="M19 45 28 35l8 4 9-20" fill="none" stroke="#140a03" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="19" cy="45" r="5" fill="#140a03"/>
+  <circle cx="19" cy="45" r="1.9" fill="#ff7b29"/>
+  <circle cx="45" cy="19" r="5.5" fill="#fff4ea" stroke="#140a03" stroke-width="3"/>
+  <text x="76" y="41" font-family="Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', sans-serif" font-size="28" font-weight="600" letter-spacing="1.5" fill="#f6f1ec">MARTIAN <tspan fill="#ff7b29">MAP</tspan></text>
+</svg>

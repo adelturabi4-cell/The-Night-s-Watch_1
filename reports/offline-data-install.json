@@ -1,0 +1,363 @@
+{
+  "startedAt": 1794718831.8226354,
+  "regions": [
+    [
+      "Jezero",
+      18.45,
+      77.45
+    ],
+    [
+      "Olympus Mons",
+      18.65,
+      -133.8
+    ],
+    [
+      "Valles Marineris",
+      -14.01,
+      -58.59
+    ],
+    [
+      "Gale",
+      -5.44,
+      137.7
+    ],
+    [
+      "Hellas Planitia",
+      -42.43,
+      70.5
+    ],
+    [
+      "Cerberus",
+      7.145,
+      166.68
+    ],
+    [
+      "Tyrrhena Terra",
+      -24.417,
+      80.964
+    ],
+    [
+      "Dark dunes",
+      -27.79655,
+      -156.82845
+    ],
+    [
+      "Coprates",
+      -14.0217255,
+      -63.3260685
+    ],
+    [
+      "Southern crater",
+      -46.8335,
+      -143.8076
+    ],
+    [
+      "Selected region 1",
+      19.48986795,
+      15.42976319
+    ],
+    [
+      "Selected region 2",
+      25.84906067,
+      24.45611263
+    ]
+  ],
+  "tiles": {
+    "ready": 4704,
+    "failed": [],
+    "requested": 4704
+  },
+  "elevation": [
+    {
+      "region": "Jezero",
+      "catalogModels": 12
+    },
+    {
+      "region": "Olympus Mons",
+      "catalogModels": 4
+    },
+    {
+      "region": "Valles Marineris",
+      "catalogModels": 2
+    },
+    {
+      "region": "Gale",
+      "catalogModels": 12
+    },
+    {
+      "region": "Hellas Planitia",
+      "catalogModels": 1
+    },
+    {
+      "region": "Cerberus",
+      "catalogModels": 2
+    },
+    {
+      "region": "Tyrrhena Terra",
+      "catalogModels": 3
+    },
+    {
+      "region": "Dark dunes",
+      "catalogModels": 12
+    },
+    {
+      "region": "Coprates",
+      "catalogModels": 5
+    },
+    {
+      "region": "Southern crater",
+      "catalogModels": 0
+    },
+    {
+      "region": "Selected region 1",
+      "catalogModels": 0
+    },
+    {
+      "region": "Selected region 2",
+      "catalogModels": 0
+    },
+    {
+      "product": "P18_007925_1987_XN_18N282W__P19_008650_1987_XI_18N282W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "P02_001820_1984_XI_18N282W__P06_003442_1987_XI_18N282W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "N03_063453_1982_XN_18N282W__N03_063519_1982_XN_18N282W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "N02_063242_1988_XN_18N283W__N03_063532_1988_XN_18N283W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "P10_005032_1980_XI_18N133W__P10_004821_2003_XI_20N134W",
+      "bytes": 6967558,
+      "shape": [
+        8775,
+        1326
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/P10_005032_1980_XI_18N133W__P10_004821_2003_XI_20N134W/P10_005032_1980_XI_18N133W__P10_004821_2003_XI_20N134W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "N10_066217_1969_XN_16N133W__P10_005032_1980_XI_18N133W",
+      "bytes": 52921639,
+      "shape": [
+        11912,
+        2681
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/N10_066217_1969_XN_16N133W__P10_005032_1980_XI_18N133W/N10_066217_1969_XN_16N133W__P10_005032_1980_XI_18N133W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "K07_055944_1981_XN_18N133W__P10_004821_2003_XI_20N134W",
+      "bytes": 43280720,
+      "shape": [
+        9371,
+        2278
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/K07_055944_1981_XN_18N133W__P10_004821_2003_XI_20N134W/K07_055944_1981_XN_18N133W__P10_004821_2003_XI_20N134W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "P21_009317_1983_XN_18N133W__P18_007959_1984_XN_18N133W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "D22_035766_1658_XI_14S058W__F03_036900_1653_XN_14S058W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "D06_029595_1662_XN_13S058W__J06_047054_1683_XN_11S059W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W",
+      "bytes": 19800410,
+      "shape": [
+        3697,
+        1558
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "T01_000815_1749_XN_05S222W__P22_009650_1772_XI_02S222W",
+      "bytes": 18698469,
+      "shape": [
+        3141,
+        1548
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/T01_000815_1749_XN_05S222W__P22_009650_1772_XI_02S222W/T01_000815_1749_XN_05S222W__P22_009650_1772_XI_02S222W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "T01_000815_1749_XN_05S222W__P22_009571_1756_XI_04S222W",
+      "bytes": 19570600,
+      "shape": [
+        3956,
+        1423
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/T01_000815_1749_XN_05S222W__P22_009571_1756_XI_04S222W/T01_000815_1749_XN_05S222W__P22_009571_1756_XI_04S222W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "T01_000815_1749_XN_05S222W__P21_009149_1752_XI_04S222W",
+      "bytes": 26029846,
+      "shape": [
+        4395,
+        1669
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/T01_000815_1749_XN_05S222W__P21_009149_1752_XI_04S222W/T01_000815_1749_XN_05S222W__P21_009149_1752_XI_04S222W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "F11_039942_1369_XN_43S289W__F11_040021_1369_XN_43S289W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "F02_036417_1871_XN_07N193W__D07_029824_1845_XN_04N193W",
+      "bytes": 6866355,
+      "shape": [
+        2131,
+        972
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/F02_036417_1871_XN_07N193W__D07_029824_1845_XN_04N193W/F02_036417_1871_XN_07N193W__D07_029824_1845_XN_04N193W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "F02_036417_1871_XN_07N193W__B01_009939_1876_XI_07N193W",
+      "bytes": 3336878,
+      "shape": [
+        2008,
+        632
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/F02_036417_1871_XN_07N193W__B01_009939_1876_XI_07N193W/F02_036417_1871_XN_07N193W__B01_009939_1876_XI_07N193W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "P12_005710_1564_XI_23S279W__B05_011485_1553_XN_24S279W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "F09_039269_1550_XN_25S279W__F10_039625_1550_XN_25S279W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "F05_037673_1564_XN_23S279W__F06_038240_1553_XN_24S279W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "J07_047506_1517_XN_28S156W__J05_046939_1525_XN_27S156W",
+      "bytes": 8773237,
+      "shape": [
+        2070,
+        1078
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/J07_047506_1517_XN_28S156W__J05_046939_1525_XN_27S156W/J07_047506_1517_XN_28S156W__J05_046939_1525_XN_27S156W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "J07_047506_1517_XN_28S156W__F14_041348_1519_XN_28S156W",
+      "bytes": 11579929,
+      "shape": [
+        2182,
+        1287
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/J07_047506_1517_XN_28S156W__F14_041348_1519_XN_28S156W/J07_047506_1517_XN_28S156W__F14_041348_1519_XN_28S156W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "J06_047150_1524_XN_27S156W__J07_047506_1517_XN_28S156W",
+      "bytes": 26596523,
+      "shape": [
+        4942,
+        1670
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/J06_047150_1524_XN_27S156W__J07_047506_1517_XN_28S156W/J06_047150_1524_XN_27S156W__J07_047506_1517_XN_28S156W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "J06_047150_1524_XN_27S156W__J05_046939_1525_XN_27S156W",
+      "bytes": 20901567,
+      "shape": [
+        3421,
+        1588
+      ],
+      "source": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/J06_047150_1524_XN_27S156W__J05_046939_1525_XN_27S156W/J06_047150_1524_XN_27S156W__J05_046939_1525_XN_27S156W-DEM-geoid-adj.tif"
+    },
+    {
+      "product": "K22_062153_1659_XN_14S063W__K23_062219_1659_XN_14S063W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "J20_052579_1659_XN_14S063W__J21_052869_1659_XN_14S063W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "G22_026905_1669_XN_13S063W__G23_027182_1669_XN_13S063W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    },
+    {
+      "product": "D12_031995_1659_XN_14S063W__D12_031929_1659_XN_14S063W",
+      "error": "The catalog did not return a supported numeric elevation asset."
+    }
+  ],
+  "hirise": [
+    {
+      "id": "ESP_011485_1555",
+      "url": "/mars-data/hirise/observations/ESP_011485_1555.jpg",
+      "bounds": {
+        "west": 80.88479182736398,
+        "east": 81.04444779686702,
+        "south": -24.647569158403,
+        "north": -24.185670023131
+      },
+      "source": "https://www.uahirise.org/ESP_011485_1555",
+      "asset": "https://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/RDR/ESP/ORB_011400_011499/ESP_011485_1555/ESP_011485_1555_RED.browse.jpg",
+      "bytes": 2723344,
+      "credit": "NASA/JPL-Caltech/UArizona"
+    },
+    {
+      "id": "ESP_049009_1520",
+      "url": "/mars-data/hirise/observations/ESP_049009_1520.jpg",
+      "bounds": {
+        "west": -156.88799501628,
+        "east": -156.76887106901,
+        "south": -27.890640603431,
+        "north": -27.70248381283
+      },
+      "source": "https://www.uahirise.org/ESP_049009_1520",
+      "asset": "https://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/RDR/ESP/ORB_049000_049099/ESP_049009_1520/ESP_049009_1520_RED.browse.jpg",
+      "bytes": 2369389,
+      "credit": "NASA/JPL-Caltech/UArizona"
+    },
+    {
+      "id": "ESP_052869_1660",
+      "url": "/mars-data/hirise/observations/ESP_052869_1660.jpg",
+      "bounds": {
+        "west": -63.38317402212999,
+        "east": -63.26896295969999,
+        "south": -14.08759905807,
+        "north": -13.955852242895
+      },
+      "source": "https://www.uahirise.org/ESP_052869_1660",
+      "asset": "https://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/RDR/ESP/ORB_052800_052899/ESP_052869_1660/ESP_052869_1660_RED.browse.jpg",
+      "bytes": 1506660,
+      "credit": "NASA/JPL-Caltech/UArizona"
+    },
+    {
+      "id": "ESP_075450_1330",
+      "url": "/mars-data/hirise/observations/ESP_075450_1330.jpg",
+      "bounds": {
+        "west": -143.87632062541002,
+        "east": -143.73888879288,
+        "south": -46.901790603529,
+        "north": -46.765181384732
+      },
+      "source": "https://www.uahirise.org/ESP_075450_1330",
+      "asset": "https://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/RDR/ESP/ORB_075400_075499/ESP_075450_1330/ESP_075450_1330_RED.browse.jpg",
+      "bytes": 2038113,
+      "credit": "NASA/JPL-Caltech/UArizona"
+    }
+  ],
+  "limits": [
+    "Global overview imagery is cached through level 4; regional detail through each supported level.",
+    "CTX elevation covers valid stereo footprints, not all of Mars.",
+    "HiRISE JPEG previews are orbital images, not elevation models.",
+    "No live global weather, soil strength or calibrated rock-abundance feed is available in these datasets."
+  ],
+  "completedAt": 1794719461.7341447,
+  "installedBytes": 513377750
+}

@@ -1,0 +1,32 @@
+........................................................................ [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\asus\Desktop\MarsNexus\mars-nexus\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+tests/test_data_integration.py::test_pack_elevation_is_sampled_from_native_mars_crs_not_color_tiles
+tests/test_data_integration.py::test_real_planner_cell_has_geographic_location_and_profile_aware_block_reason
+tests/test_planner.py::test_geotiff_loader_preserves_elevation_resolution_and_nodata
+  C:\Users\asus\Desktop\MarsNexus\mars-nexus\backend\app\terrain.py:163: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    working_transform = ds.transform * rasterio.Affine.scale(ds.width/out_shape[1], ds.height/out_shape[0])
+
+tests/test_data_integration.py::test_real_planner_cell_has_geographic_location_and_profile_aware_block_reason
+  C:\Users\asus\Desktop\MarsNexus\mars-nexus\backend\app\terrain.py:213: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    affine = rasterio.Affine(*full.meta['transform']) * rasterio.Affine.translation(left,top)
+
+tests/test_data_integration.py::test_hirise_has_real_texture_and_explicit_missing_coverage
+  C:\Users\asus\Desktop\MarsNexus\mars-nexus\backend\.venv\Lib\site-packages\rasterio\__init__.py:379: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+    dataset = DatasetReader(path, driver=driver, sharing=sharing, thread_safe=thread_safe, **kwargs)
+
+tests/test_surface_navigation.py::test_explicit_destination_uses_selected_endpoint_and_existing_metrics
+tests/test_surface_navigation.py::test_navigation_rejects_missing_coverage_same_cell_and_bad_coordinates
+tests/test_surface_workspace.py::test_workspace_preserves_selected_coordinates_and_route_grid
+tests/test_surface_workspace.py::test_same_cell_is_a_selection_preview_never_a_valid_traverse
+tests/test_surface_workspace.py::test_low_energy_and_slope_limits_produce_real_rejection_reasons
+tests/test_surface_workspace.py::test_low_energy_and_slope_limits_produce_real_rejection_reasons
+tests/test_terrain_api.py::test_remote_terrain_drives_phase_three_without_changing_endpoints
+  C:\Users\asus\Desktop\MarsNexus\mars-nexus\backend\app\surface_workspace.py:93: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    affine = affine * Affine.translation(left, top)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+72 passed, 13 warnings in 40.81s

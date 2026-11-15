@@ -1,0 +1,19 @@
+{
+ "pack": "Martian_Map_Web_Data",
+ "imported_utc": "2026-11-15T00:10:36+00:00",
+ "pack_validated_utc": "2026-11-14T21:59:43.652431+00:00",
+ "pack_validation": "passed",
+ "coordinate_system": "Mars 2000 sphere, planetocentric latitude / east longitude, R = 3,396,190 m",
+ "counts": {
+  "geologic_polygons": 1308,
+  "geologic_units": 14,
+  "surface_features": 285,
+  "small_craters": 341,
+  "rover_waypoints": 708,
+  "rover_images": 708
+ },
+ "sources": {
+  "geology": "Sun, V.Z., and Stack, K.M., 2020, Geologic map of Jezero crater and the Nili Planum region, Mars: USGS Scientific Investigations Map 3464, scale 1:75,000, https://doi.org/10.3133/sim3464",
+  "rover": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json"
+ }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "description": "Prepared Mars raster layers for the MarsPath web application.",
+  "tileScheme": "XYZ Web Mercator (EPSG:3857), visualization only; use source COG for measurements.",
+  "layers": [
+    {
+      "id": "mola-global-color",
+      "name": "MOLA global elevation color",
+      "type": "xyz-raster",
+      "tiles": "/mars-data/mola/tiles/{z}/{x}/{y}.png",
+      "minZoom": 0,
+      "maxZoom": 4,
+      "bounds": [-180, -85.0511, 180, 85.0511],
+      "source": "Mars Global Surveyor / MOLA MEGDR product MEGT90N000EB.IMG",
+      "sourceResolutionMetersAtEquator": 3705,
+      "measurementAsset": "/mars-data/mola/elevation.cog.tif",
+      "globeTexture": "/mars-data/mola/globe-color.jpg",
+      "noDataValue": -32768,
+      "notes": "Global-scale topography; too coarse for small rocks or local obstacle detection."
+    },
+    {
+      "id": "hirise-esp-052869-1660",
+      "name": "HiRISE ESP_052869_1660_RED quicklook",
+      "type": "xyz-raster",
+      "tiles": "/mars-data/hirise/tiles/{z}/{x}/{y}.jpg",
+      "minZoom": 8,
+      "maxZoom": 17,
+      "bounds": [-63.383174, -14.087599, -63.268963, -13.955852],
+      "marsEastLongitudeBounds": [296.616826, 296.731037],
+      "coordinateConvention": "Planetocentric latitude; east-positive longitude. Tile bounds normalized to -180..180 for web map clients.",
+      "source": "HiRISE ESP_052869_1660_RED.QLOOK.JP2 with matching PDS label ESP_052869_1660_RED.LBL",
+      "sourceImageDimensions": [26664, 31232],
+      "notes": "Single grayscale lossy quicklook image. Footprint was assigned from the matching PDS label bounds; use a full-resolution orthoimage/DTM for precision terrain analysis."
+    }
+  ]
+}

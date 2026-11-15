@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    {
+      "latitude": 7.145,
+      "longitude": 166.68
+    },
+    {
+      "latitude": 7.15,
+      "longitude": 166.685
+    }
+  ],
+  "source": "NASA / USGS \u00b7 CTX stereo elevation",
+  "resolutionM": 20.0,
+  "productId": "F02_036417_1871_XN_07N193W__D07_029824_1845_XN_04N193W",
+  "sourceUrl": "https://stac.astrogeology.usgs.gov/docs/data/mars/ctxdtms/",
+  "routes": {
+    "shortest": {
+      "status": "ok",
+      "verdict": {
+        "status": "caution",
+        "label": "Usable with caution",
+        "reasons": [
+          "Maximum slope 19.2\u00b0; mobility limit 22\u00b0.",
+          "Remaining margin 766 Wh above the energy reserve after travelling 438 m.",
+          "Maximum modelled local risk 0.92 / 1 from slope and roughness; caution required.",
+          "Derived from orbital elevation. Small rocks, soil strength and current weather are unmeasured."
+        ]
+      },
+      "distanceM": 438.2
+    },
+    "safest": {
+      "status": "ok",
+      "verdict": {
+        "status": "caution",
+        "label": "Usable with caution",
+        "reasons": [
+          "Maximum slope 13.5\u00b0; mobility limit 22\u00b0.",
+          "Remaining margin 760 Wh above the energy reserve after travelling 461 m.",
+          "Maximum modelled local risk 0.75 / 1 from slope and roughness; caution required.",
+          "Derived from orbital elevation. Small rocks, soil strength and current weather are unmeasured."
+        ]
+      },
+      "distanceM": 461.3
+    },
+    "optimal": {
+      "status": "ok",
+      "verdict": {
+        "status": "caution",
+        "label": "Usable with caution",
+        "reasons": [
+          "Maximum slope 13.5\u00b0; mobility limit 22\u00b0.",
+          "Remaining margin 760 Wh above the energy reserve after travelling 461 m.",
+          "Maximum modelled local risk 0.75 / 1 from slope and roughness; caution required.",
+          "Derived from orbital elevation. Small rocks, soil strength and current weather are unmeasured."
+        ]
+      },
+      "distanceM": 461.3
+    }
+  },
+  "site": {
+    "terrain": {
+      "level": "local",
+      "resolutionM": 20.0,
+      "source": "NASA / USGS \u00b7 CTX stereo elevation",
+      "sourceUrl": "https://stac.astrogeology.usgs.gov/docs/data/mars/ctxdtms/",
+      "productId": "F02_036417_1871_XN_07N193W__D07_029824_1845_XN_04N193W",
+      "elevationM": -2874.2,
+      "slopeDeg": 5.546533107757568,
+      "roughnessM": 1.8766579627990723,
+      "class": "moderate",
+      "risk": 0.53
+    },
+    "verdict": "caution"
+  },
+  "screening": {
+    "level": "local",
+    "resolutionM": 20.0
+  },
+  "comparisonRoutes": [
+    "shortest",
+    "safest",
+    "optimal"
+  ]
+}

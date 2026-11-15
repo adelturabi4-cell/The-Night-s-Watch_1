@@ -1,0 +1,11 @@
+.venv/
+.public/
+__pycache__/
+.pytest_cache/
+node_modules/
+dist/
+*.tif
+*.tiff
+!backend/data/jezero-ctx-20m.tif
+# Intermediate frames and audio for the explainer video (regenerate with tools/video)
+media/video-build/

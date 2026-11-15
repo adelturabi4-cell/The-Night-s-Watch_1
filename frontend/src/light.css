@@ -1,0 +1,211 @@
+/* Warm mid-tone mission workspace: stone, sand, burnt orange and muted gold. */
+:root {
+  color-scheme: light;
+  --bg: #c9bca9; --panel: #e7dece; --panel-2: #ddd2c0; --line: #b4a086;
+  --ink: #2c241c; --ink-2: #5e5142; --ink-3: #5e5142;
+  --accent: #923b1d; --mars: #a14322; --highlight: #783016;
+  --warn: #945b1e; --bad: #ad3525; --good: #737047;
+  --surface: #e7dece; --surface-soft: #d9ccb8; --accent-soft: #dfbea3;
+  --gold-soft: #dfc894; --gold-ink: #624813;
+}
+body { background: var(--bg); }
+.mission-sidebar, .mission-topbar { background: #fffdf8; }
+.brand-orbit { border-color: #edc899; color: #d9671a; background: #fff4df; }
+.mission-brand, .mission-sidebar nav a:hover { color: var(--ink); }
+.mission-sidebar nav a:hover, .sidebar-bottom > a:hover { background: #f8ecda; color: #8a451c; }
+.mission-sidebar a[aria-current=page] { background: #fff0d7; border-color: #edc689; color: #a44916; }
+.sidebar-mission, .sidebar-toggle { background: #fbf5e9; }
+.nav-caption, .mission-footer { color: #84735e; }
+.sidebar-source small, .topbar-context > span { color: var(--ink-2); }
+.global-search, .registry-search { background: #f8f3ea; }
+.search-results, .popover-content { background: #fffdf8; border-color: var(--line); box-shadow: 0 12px 35px #754c1b19; }
+.search-results a:hover, .search-results button:hover { background: #faedd8; }
+.profile-avatar { background: #ffedc6; border-color: #eaca8c; color: #9a4b16; }
+.tag { color: #9b5116; border-color: #edcf95; background: #fff4d8; }
+.button-link { background: #fffdf8; }
+.primary-link, button.primary { color: #422709 !important; background: #ffca57; border-color: #e9b13e; }
+.primary-link:hover, button.primary:hover:not(:disabled) { background: #ffd877; border-color: #e4a53b; }
+button:hover:not(:disabled) { background-color: #fff0d7; border-color: #c78542; }
+button.on, .mission-tabs button[aria-pressed=true], .full-report .mission-tabs button[aria-pressed=true] { background: #ffedc7; color: #8f4613; border-color: #dfb76c; }
+.mission-notice { background: #fff0c5; border-color: #e8ce91; color: #825318; }
+.overview-stat, .intelligence-card, .orbital-panel, .panel, .mission-cards > article,
+.settings-card, .archive-card, .candidate-grid > article, .data-summary > div,
+.archive-summary > div, .provenance-grid article, .nav-results > div, .nav-frames figure { background: #fffdf9; box-shadow: 0 3px 14px #69431105; }
+.overview-stat > div svg, .overview-stat > p, .panel-title svg { color: #94724b; }
+.dashboard-layout { grid-template-columns: minmax(0, 1fr) 310px; }
+.dashboard-intelligence { display: flex; flex-direction: column; }
+.dashboard-intelligence > * { width: 100%; }
+.compact-overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 0; padding: 3px 12px; }
+.compact-overview .overview-stat { border: 0; border-radius: 0; padding: 12px 9px; background: transparent; box-shadow: none; min-width: 0; }
+.compact-overview .overview-stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+.compact-overview .overview-stat:nth-child(odd) { border-right: 1px solid var(--line); }
+.compact-overview .overview-stat > div { font-size: 10px; gap: 4px; }
+.compact-overview .overview-stat > div svg { width: 14px; height: 14px; }
+.compact-overview .overview-stat > strong { font-size: 23px; line-height: 1.7; }
+.compact-overview .overview-stat > p { font-size: 9px; line-height: 1.5; }
+.dashboard-globe.mars-stage, .explorer-page .mars-stage, .mars-stage { background-color: #f4ede0; background-image: linear-gradient(#bca98a17 1px, transparent 1px), linear-gradient(90deg, #bca98a17 1px, transparent 1px); background-size: 55px 55px; }
+.dashboard-globe.mars-stage { height: clamp(430px, 42vw, 620px); }
+.orbital-topline, .orbital-topline small, .orbital-bottomline, .orbital-label > span { color: #75634e; }
+.orbital-north, .orbital-label strong { color: #463423; }
+.orbital-label { text-shadow: none; background: #fffcf2d9; padding: 9px 12px; border-radius: 0 4px 4px 0; }
+.dashboard-globe .mars-stage-controls button { background: #fffaf1ed; }
+.orbital-regions button[aria-pressed=true], .panel-title .seg button.on { background: #ffe9b7; border-color: #dcac5f; color: #88420d; }
+.quick-tool-grid a, .quick-tool-grid a:hover { background: #fffdf9; }
+.quick-tool-grid a:hover { border-color: #dda25b; }
+.site-brief > div { border-color: var(--line); }
+.score-ring circle { stroke: #eee2cc; }
+.score-ring circle + circle { stroke: #de7b26; }
+.site-image-strip > span, .site-image-strip small { color: #fff2d9; }
+.card-footnote { background: #faf4e8; }
+.analysis-icon, .empty-symbol, .advisor-symbol { background: #fff0d0; border-color: #e5c68a; }
+.activity-timeline li > i { background: #e39230; }
+.activity-timeline li:not(:last-child)::after { border-color: #e9d2aa; }
+.workspace-empty { background: #fffaf0; border-color: #dcc5a0; }
+.inline-error { background: #fff0dd; border-color: #dfb383; color: #8a4014; }
+.full-report .mars-site, .full-report .mission-tabs { background: #fff8e9; }
+.mars-report, .mars-explorer { --mars-surface: #fffdf9; --mars-accent: #b94f10; }
+.mars-explorer button, .mars-report button { background: #fffaf0; color: var(--ink); border-color: var(--line); }
+.mars-explorer button[aria-pressed=true], .mars-report button[aria-pressed=true], .mars-explorer button:hover:not(:disabled), .mars-report button:hover:not(:disabled) { background: #ffedc7; border-color: #d6a357; }
+.mars-coordinate-form input[type=number], .mars-landmarks input, .guide-question textarea { background: #fffdf9; border-color: var(--line); color: var(--ink); }
+.mars-stage-top { background: linear-gradient(#faf2e4ed, transparent); }
+.mars-stage-bottom { background: linear-gradient(0deg, #faf2e4ed, transparent); }
+.mars-stage-bottom span:last-child, .mars-coordinates, .mars-data a, .mars-report a, .mars-score strong { color: var(--accent); }
+.mars-globe-fallback { color: var(--ink-2); }
+.terrain-safety.lower { color: #7d6517; }
+.terrain-safety.elevated, .mars-unavailable { color: #a44e19; }
+.terrain-safety.unknown { color: #7a6853; }
+.terrain-factor-grid article { background: #fffaf0; }
+.terrain-factor-grid small { color: #8b601f; }
+.mission-table { background: #fffdf9; }
+.mission-table thead th { background: #f4e9d6; color: #736047; }
+.mission-table td { color: #594b3b; }
+.mission-advice { background: #fff9ec; }
+.advisor-conversation { background: #fffefb; }
+.advisor-header, .site-guide .guide-question, .advisor-disclaimer { background: #fbf3e3; }
+.suggested-questions button { background: #fff6e5; }
+.chat-question { background: #ffedc5; border-color: #e5c58a; }
+.chat-answer > p { color: #554536; }
+.app .source { background: #fff1d4; border-color: #d5ac63; }
+.app .source b { color: #865315; }
+.route { background: #fffaf1; }
+.route.on { background: #fff0c9; border-color: #daa647; }
+.feas.ok { color: #775d18; background: #f8edcc; }
+.feas.bad, .warn-text { color: #a14b20; }
+.simulation-snapshot { background: #fff8e7; }
+.surface-navigation { background: #fffdf9; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.navigation-body { padding: 15px; font-size: 11px; }
+.navigation-body > p { color: var(--ink-2); line-height: 1.8; margin: 0 0 12px; }
+.navigation-body dl { margin: 0 0 12px; }
+.navigation-body dl > div { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.navigation-body dt { color: #8e5c21; font-size: 10px; }
+.navigation-body dd { margin: 5px 0 0; font: 11px var(--mono); direction: ltr; }
+.navigation-actions { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0; }
+.navigation-actions button { font-size: 11px; flex: 1; min-height: 38px; }
+.navigation-body details { margin: 13px 0; }
+.navigation-body summary { cursor: pointer; color: var(--accent); }
+.navigation-body form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.navigation-body form label { display: grid; flex: 1; min-width: 90px; gap: 5px; }
+.navigation-body input { padding: 7px; min-width: 0; width: 100%; }
+.navigation-strategy { display: grid; gap: 7px; margin: 14px 0; }
+.navigation-metrics { display: flex; flex-wrap: wrap; gap: 15px; margin: 14px 0; }
+.navigation-metrics span { color: var(--ink-2); font-size: 10px; }
+.navigation-metrics b { display: block; color: var(--ink); margin-top: 5px; font-family: var(--mono); }
+.mars-workspace > .surface-navigation { margin-top: 15px; }
+.location-evidence, .cell-inspector { padding: 18px; border: 1px solid var(--line); background: var(--surface-soft); border-radius: 5px; }
+.location-evidence h3, .cell-inspector h3 { font-size: 13px; margin: 0 0 12px; color: var(--accent); }
+.location-evidence p, .cell-inspector p, .location-evidence li, .cell-inspector li { font-size: 11px; line-height: 1.8; margin: 8px 0; }
+.location-evidence ul, .cell-inspector ul { padding-inline-start: 20px; }
+.cell-inspector h4 { margin: 8px 0; font-size: 18px; }
+.cell-inspector strong { display: block; font-size: 12px; line-height: 1.8; }
+.cell-inspector small { color: var(--ink-2); }
+.map-tip, .chart-tip { background: var(--surface); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 5px 20px #49341d24; }
+.map-tip b, .chart-tip b { color: var(--ink); }
+.route-select[aria-pressed=true] { background: #ddc59c; color: #422d17; border-color: #b9935f; }
+
+/* Neutral surfaces carry the data; terracotta marks actions, gold marks context. */
+.mission-sidebar { background: #c4b49e; }
+.mission-topbar { background: #e7dece; }
+.mission-footer { background: transparent; color: #655541; }
+.brand-orbit { background: #d9c2a9; border-color: #b99b7e; color: #b3532d; }
+.sidebar-mission, .sidebar-toggle, .global-search, .registry-search { background: var(--surface-soft); }
+.nav-caption, .topbar-context > span { color: #65543f; }
+.mission-sidebar nav a:hover, .sidebar-bottom > a:hover { background: #c9b69b; color: var(--ink); }
+.mission-sidebar a[aria-current=page] { background: #ddbd9f; border-color: #b88f6a; color: #793116; box-shadow: inset 3px 0 #b65c34; }
+.search-results, .popover-content, .button-link { background: var(--surface); }
+.search-results a:hover, .search-results button:hover { background: var(--surface-soft); }
+.profile-avatar { background: #d0bfa5; border-color: #b69d7b; color: #59422a; }
+.tag { color: var(--gold-ink); background: var(--gold-soft); border-color: #bca16b; }
+.panel-title { background: #dfd2be; }
+.overview-stat, .intelligence-card, .orbital-panel, .panel, .mission-cards > article,
+.settings-card, .archive-card, .candidate-grid > article, .data-summary > div,
+.archive-summary > div, .provenance-grid article, .nav-results > div, .nav-frames figure,
+.surface-navigation, .quick-tool-grid a { background: var(--surface); box-shadow: 0 2px 8px #43372504, 0 10px 28px #43372503; }
+.compact-overview .overview-stat { background: transparent; box-shadow: none; }
+.overview-stat > div svg, .panel-title svg, .overview-stat > p { color: #66523b; }
+.quick-tool-grid a:hover { background: #e1d4bf; border-color: #b5906a; }
+.dashboard-globe.mars-stage, .explorer-page .mars-stage, .mars-stage { background-color: #bfae94; background-image: linear-gradient(#9a8b7410 1px, transparent 1px), linear-gradient(90deg, #9a8b7410 1px, transparent 1px); }
+.orbital-label { background: #e2d5bfee; }
+.orbital-topline, .orbital-topline small, .orbital-bottomline, .orbital-label > span { color: #5a4832; }
+.orbital-north, .orbital-label strong { color: #352719; }
+.orbital-regions button[aria-pressed=true], .panel-title .seg button.on,
+.panel-title .seg button[aria-pressed=true] { background: var(--accent-soft); border-color: #b38964; color: #7d3218; }
+.score-ring circle { stroke: #c9b797; }
+.score-ring circle + circle { stroke: #9d7228; }
+.card-footnote { background: var(--surface-soft); color: var(--ink-2); }
+.analysis-icon, .empty-symbol, .advisor-symbol { background: #dccbb0; border-color: #bba17c; color: var(--accent); }
+.activity-timeline li > i { background: #916926; }
+.activity-timeline li:not(:last-child)::after { border-color: #b9a27d; }
+.workspace-empty { background: #d9cbb5; border-color: #b59a76; }
+.mission-notice { background: #dfc99b; border-color: #b89b61; color: #5c4112; }
+.inline-error { background: #dfbfa3; border-color: #b68e68; color: #8c4826; }
+.full-report .mars-site, .full-report .mission-tabs { background: #d8c8af; }
+.mars-report, .mars-explorer { --mars-surface: var(--surface); --mars-accent: var(--accent); }
+.mars-explorer button, .mars-report button { background: var(--surface); }
+button:hover:not(:disabled), .mars-explorer button:hover:not(:disabled), .mars-report button:hover:not(:disabled) { background-color: #d9c4a7; border-color: #a9855f; }
+button.on, .mission-tabs button[aria-pressed=true], .full-report .mission-tabs button[aria-pressed=true],
+.mars-explorer button[aria-pressed=true], .mars-report button[aria-pressed=true] { background: var(--accent-soft); color: #943f20; border-color: #ae805a; }
+.mission-shell button.primary, .mission-shell .primary-link { background: #a14322; border-color: #a14322; color: #fffaf5 !important; box-shadow: 0 2px 4px #8f3b1814; }
+.mission-shell button.primary:hover:not(:disabled), .mission-shell .primary-link:hover { background: #7c3015; border-color: #7c3015; color: #fff !important; }
+.mission-shell button.primary:disabled { background: #b99a7b; border-color: #b99a7b; color: #4d3423 !important; opacity: .72; box-shadow: none; }
+.mars-coordinate-form input[type=number], .mars-landmarks input, .guide-question textarea { background: var(--surface); }
+.mars-stage-top { background: linear-gradient(#d3c2a7ed, transparent); }
+.mars-stage-bottom { background: linear-gradient(0deg, #d3c2a7ed, transparent); }
+.terrain-factor-grid article, .mission-table { background: var(--surface); }
+.mission-table thead th { background: #d0bfa3; color: #554129; }
+.mission-table td { color: #493824; }
+.mission-advice, .advisor-header, .site-guide .guide-question, .advisor-disclaimer,
+.simulation-snapshot { background: #daccb4; }
+.advisor-conversation { background: var(--surface); }
+.suggested-questions button { background: #e1d4bf; }
+.chat-question { background: #d9bea0; border-color: #b89a75; }
+.app .source { background: #dec99b; border-color: #b69b64; }
+.app .source b { color: #624715; }
+.route { background: #e1d4bf; }
+.route.on { background: #decb9f; border-color: #b19359; box-shadow: inset 3px 0 #956b24; }
+.route-select svg { background: #776c5b; border-radius: 3px; padding: 1px; }
+.map-key-item .key-line { filter: drop-shadow(0 1px 0 #675c4b) drop-shadow(0 -1px 0 #675c4b); }
+.pin { background: #d5c5a9; color: #4c3925; border: 1px solid #b19975; }
+.pin.goal { background: var(--accent); color: #fffaf5; border-color: var(--accent); }
+.feas.ok { color: #5c501d; background: #d4c79f; }
+.navigation-body dt, .terrain-factor-grid small { color: #68431f; }
+
+@media (max-width: 1250px) {
+  .dashboard-layout { grid-template-columns: minmax(0, 1fr) 275px; }
+  .dashboard-intelligence .screening-body { flex-direction: row; }
+  .dashboard-intelligence .site-brief > div { display: flex; }
+  .dashboard-intelligence .site-brief dd { text-align: right; }
+}
+@media (min-width: 601px) and (max-width: 980px) {
+  .dashboard-layout { grid-template-columns: minmax(0, 1fr) 240px; gap: 14px; }
+  .orbital-panel > .panel-title .tag { display: none; }
+  .dashboard-globe.mars-stage { height: 440px; }
+}
+@media (max-width: 600px) {
+  .dashboard-layout { grid-template-columns: minmax(0, 1fr); }
+  .dashboard-primary { display: contents; }
+  .dashboard-primary > .orbital-panel { grid-row: 1; }
+  .dashboard-intelligence { grid-row: 2; }
+  .quick-tools { grid-row: 3; }
+  .dashboard-globe.mars-stage { height: 420px; }
+  .compact-overview .overview-stat > strong { font-size: 25px; }
+}

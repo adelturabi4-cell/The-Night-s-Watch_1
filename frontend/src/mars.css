@@ -1,0 +1,152 @@
+.mars-explorer,
+.mars-report {
+  --mars-ink: var(--ink);
+  --mars-muted: var(--ink-2);
+  --mars-border: var(--line);
+  --mars-surface: var(--panel);
+  --mars-accent: var(--accent);
+  color: var(--mars-ink);
+  background: var(--bg);
+}
+
+.mars-explorer { min-width: 0; background: transparent; }
+
+.mars-workspace { min-width: 0; }
+.mars-kicker { color: var(--mars-accent); text-transform: uppercase; letter-spacing: .15em; font-size: 10px; font-weight: 750; margin-bottom: 5px; }
+
+.mars-stage {
+  position: relative;
+  height: clamp(320px, 58vh, 700px);
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--mars-border);
+  border-radius: 4px;
+  background: radial-gradient(ellipse at 48% 48%, #211713, #0b0a0a 72%);
+}
+
+.mars-stage canvas { cursor: grab; display: block; }
+.mars-stage canvas:active { cursor: grabbing; }
+.mars-flat-map { width: 100%; height: 100%; touch-action: none; }
+.mars-stage-top, .mars-stage-bottom {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 14px;
+  color: var(--mars-muted);
+  pointer-events: none;
+  font-size: 11px;
+}
+.mars-stage-top { top: 0; align-items: start; background: linear-gradient(180deg, #100f0ee8, transparent); padding-bottom: 24px; }
+.mars-stage-top strong { display: block; color: var(--mars-ink); font-size: 15px; }
+.mars-stage-top span { display: block; }
+.mars-stage-top [role=status] { color: var(--mars-ink); }
+.mars-active-route { color: var(--mars-accent); }
+.mars-stage-north { font-family: 'IBM Plex Mono', Consolas, monospace; letter-spacing: .08em; }
+.mars-stage-north i { display: inline-block; border: 5px solid transparent; border-top: 0; border-bottom: 8px solid var(--mars-accent); }
+.mars-stage-bottom { bottom: 0; background: linear-gradient(0deg, #0e0c0be6, transparent); }
+.mars-stage-bottom span:last-child, .mars-coordinates { font-family: 'IBM Plex Mono', Consolas, monospace; color: #F0D66C; }
+.mars-stage-controls {
+  position: absolute;
+  right: 12px;
+  bottom: 52px;
+  z-index: 2;
+  display: grid;
+  gap: 5px;
+}
+
+.mars-explorer button,
+.mars-report button {
+  border: 1px solid #454232;
+  border-radius: 4px;
+  background: #22231D;
+  color: var(--mars-ink);
+  min-height: 36px;
+}
+.mars-explorer button:hover:not(:disabled),
+.mars-explorer button[aria-pressed=true],
+.mars-report button:hover:not(:disabled),
+.mars-report button[aria-pressed=true] { border-color: var(--mars-accent); background: #373019; }
+.mars-explorer :focus-visible, .mars-report :focus-visible { outline-color: var(--mars-accent); }
+.mars-stage-controls button { height: 38px; width: 38px; padding: 0; font-size: 19px; }
+.mars-globe-fallback { position: absolute; top: 45%; width: 100%; text-align: center; padding: 24px; color: #d4b9a2; }
+
+.mars-map-tools, .mars-landmarks { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; padding: 12px 0; border-bottom: 1px solid var(--mars-border); }
+.mars-coordinate-form, .mars-layers { display: flex; gap: 8px; flex-wrap: wrap; align-items: end; }
+.mars-coordinate-form label { display: grid; gap: 4px; color: var(--mars-muted); font-size: 11px; }
+.mars-coordinate-form input[type=number] { background: #1c1917; border: 1px solid #4a3d34; border-radius: 4px; width: 91px; min-height: 36px; padding: 4px 7px; color: var(--mars-ink); }
+.mars-layers { gap: 4px 14px; padding: 8px 0; color: var(--mars-muted); font-size: 12px; }
+.mars-layers label { display: inline-flex; align-items: center; gap: 5px; }
+.mars-explorer input, .mars-report input, .mars-report progress { accent-color: var(--mars-accent); }
+.mars-landmarks { align-items: center; gap: 6px; }
+.mars-landmarks > span { margin-right: 4px; color: var(--mars-muted); font-size: 12px; }
+.mars-landmarks button { font-size: 12px; }
+.mars-data { padding: 11px 0; color: var(--mars-muted); font-size: 12px; }
+.mars-data a, .mars-report a { color: #F0D66C; }
+.mars-data ul { margin: 8px 0; padding-left: 20px; }
+
+.mars-report { border: 1px solid var(--mars-border); border-radius: 4px; background: var(--mars-surface); min-width: 0; }
+.mars-report-section { padding: 16px 18px; }
+.mars-report-section + .mars-report-section { border-top: 1px solid var(--mars-border); }
+.mars-site h2 { font-size: clamp(23px, 2.4vw, 30px); font-weight: 620; letter-spacing: -.03em; line-height: 1.15; }
+.mars-coordinates { font-size: 14px; margin: 8px 0 2px; }
+.mars-muted, .mars-unavailable { color: var(--mars-muted); font-size: 12px; }
+.mars-report h3 { font-size: 14px; font-weight: 700; }
+.mars-report h3 + p, .mars-report p + p { margin-top: 6px; }
+.mars-section-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 10px; }
+.mars-metadata { color: var(--mars-muted); font-size: 10px; font-family: 'IBM Plex Mono', Consolas, monospace; }
+.mars-score { display: flex; align-items: center; gap: 14px; margin: 9px 0 3px; }
+.mars-score strong { font-size: 42px; font-weight: 580; line-height: 1.13; color: #F0D66C; letter-spacing: -.06em; }
+.mars-score span { color: var(--mars-muted); font-size: 11px; white-space: nowrap; }
+.mars-score b, .mars-score small { display: block; }
+.mars-score b { font-size: 13px; }
+.mars-score small { color: var(--mars-muted); font-size: 10px; }
+.mars-report progress { width: 100%; height: 5px; display: block; margin-bottom: 12px; }
+.mars-factors { border-top: 1px solid var(--mars-border); }
+.mars-factor { border-bottom: 1px solid var(--mars-border); font-size: 12px; }
+.mars-factor summary { display: flex; gap: 8px; align-items: baseline; justify-content: space-between; color: var(--mars-muted); min-height: 34px; padding: 8px 0; list-style: none; }
+.mars-factor summary::-webkit-details-marker { display: none; }
+.mars-factor summary span::before { content: '›'; padding-right: 6px; color: var(--mars-accent); }
+.mars-factor[open] summary span::before { content: '⌄'; }
+.mars-factor summary strong { color: var(--mars-ink); text-align: right; font-size: 11px; font-family: 'IBM Plex Mono', Consolas, monospace; font-weight: 500; }
+.mars-factor-detail { color: var(--mars-muted); padding: 1px 0 8px 10px; }
+.mars-factor-detail small { display: block; font-size: 10px; margin-top: 4px; }
+.mars-data summary, .mars-factor summary, .mars-weights summary { cursor: pointer; }
+.mars-weights { padding-top: 11px; font-size: 12px; }
+.mars-weights p { margin-top: 7px; }
+.mars-weights label { display: grid; grid-template-columns: 1fr minmax(55px, 1fr) 26px; align-items: center; gap: 6px; margin: 6px 0; }
+.mars-weights label input { min-width: 0; width: 100%; }
+.mars-weights output { text-align: right; }
+.mars-report .mars-action { margin-top: 10px; border-color: #A9913D; }
+.mars-unavailable { margin-top: 10px; color: #e9b785; }
+.mars-route-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0 8px; }
+.mars-route-tabs button { display: inline-flex; align-items: center; gap: 4px; padding: 4px 7px; font-size: 11px; }
+.mars-route-tabs i { width: 9px; height: 2px; }
+.mars-route-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 9px 0; }
+.mars-route-metrics dt { color: var(--mars-muted); font-size: 11px; }
+.mars-route-metrics dd { margin: 0; font-weight: 650; }
+.globe-report-slot:empty { display: none; }
+.mars-explorer .mars-jump-report { display: none; }
+.mars-voice { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 12px; justify-content: start; }
+.mars-report .mars-voice button { border-color: #A9913D; }
+.mars-voice small { color: var(--mars-muted); }
+.terrain-safety.lower { color: #F0D66C; }
+.terrain-safety.elevated { color: #ffbc79; }
+.terrain-safety.unknown { color: #dfc3a6; }
+.mars-weather { margin: 6px 0 8px; }
+.mars-weather > div { border-top: 1px solid var(--mars-border); padding-block: 5px; }
+.mars-weather dd { margin: 1px 0 0; }
+
+@media (max-width: 840px) {
+  .mars-stage { height: clamp(300px, 53vh, 620px); }
+  .mars-explorer .mars-jump-report { display: inline-block; margin-top: 10px; }
+}
+
+@media (max-width: 420px) {
+  .mars-stage-bottom { align-items: end; padding-inline: 8px; font-size: 9px; }
+  .mars-stage-bottom span:first-child { max-width: 150px; }
+}
