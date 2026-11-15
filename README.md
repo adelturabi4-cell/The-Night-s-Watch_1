@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MARTIAN MAP
 
 Mars exploration and mission planning in the existing MarsNexus application.
@@ -263,3 +264,6 @@ backend/app/main.py       FastAPI endpoints
 backend/tests/            validation tests
 frontend/src/             React app: map, 3D view, charts, simulator
 ```
+=======
+# The-Night-s-Watch_1
+>>>>>>> 0197b5287fa3ce7fb172ad97a763714920092d5c
